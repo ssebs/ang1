@@ -1,3 +1,4 @@
+import { PortfolioDataService } from './../portfolio-data.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PortfolioComponent implements OnInit {
 
-  constructor() { }
+  tmpUsrData: Object;
+
+  constructor(private portfolioData: PortfolioDataService) { }
 
   ngOnInit() {
+    this.grabData();
+  }
+
+  grabData() {
+    this.portfolioData.getHTTPData().subscribe(tmp => this.tmpUsrData = tmp);
+
   }
 
 }

@@ -1,3 +1,7 @@
-<p>
-  portfolio works!
-</p>
+<div>
+  <ul *ngIf="tmpUsrData">
+    <li *ngFor="let usr of tmpUsrData.data" >
+      {{usr.first_name}}
+    </li>
+  </ul>
+</div>
