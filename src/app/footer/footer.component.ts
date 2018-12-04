@@ -7,6 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
 
+  items = [
+    { name: 'Github', url: 'https://github.com/ssebs/'},
+    {name: 'Website', url : 'https://ssebs.com/'}
+  ];
+
   constructor() { }
 
   ngOnInit() {

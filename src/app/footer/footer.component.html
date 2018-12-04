@@ -1,3 +1,6 @@
-<p>
-  footer works!
-</p>
+<footer>
+  <ul *ngIf="items" >
+    <li *ngFor="let x of items" ><a href="{{ x.url }} ">{{ x.name }}</a></li>
+  </ul>
+  <p>&copy;2018 - Sebastian Safari</p>
+</footer>

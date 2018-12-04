@@ -1,3 +1,10 @@
-<p>
-  home works!
-</p>
+<div class="container">
+  <h1 class='center'>Home</h1>
+
+  <h2> Welcome to {{ title }}. (Angular test 1)</h2>
+
+  <div>
+    <p> You can view the portfolio below, or go to the <a [routerLink]="['/portfolio']">Portfolio</a>&nbsp;page.</p>
+    <app-portfolio></app-portfolio>
+  </div>
+</div>
