@@ -11,18 +11,16 @@ footer {
   padding: 5px;
   text-align: center;
   ul {
-    text-decoration: none;
     margin: auto;
+    padding: 0px;
     li {
       display: inline-block;
-      margin: 0 10px 0 10px;
+      margin: 0 5px 0 5px;
     }
   }
 
   a {
-    text-decoration: none;
     color: $navtxtcolor;
-    font-weight: bold;
 
     &:visited {
       color: $navtxtcolor;
