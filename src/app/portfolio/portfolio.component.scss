@@ -1,0 +1,30 @@
+$primarytxtcolor: #222222;
+$secondarytxtcolor: #eeeeee;
+$primarycolor: #41afff;
+$secondarycolor: #006fbe;
+$primarybgcolor: #efefef;
+
+img {
+  vertical-align: middle;
+}
+ul {
+  margin: 0px;
+  text-align: center;
+}
+li {
+  color: $secondarytxtcolor;
+  display: inline-block;
+  margin: 10px;
+  padding: 10px;
+  background-color: $secondarycolor;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.flex-item {
+  width: auto;
+}

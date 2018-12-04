@@ -1,7 +1,10 @@
-<div>
+<h1 class="center">Portfolio</h1>
+
+<div class="flex-container">
   <ul *ngIf="tmpUsrData">
-    <li *ngFor="let usr of tmpUsrData.data" >
-      {{usr.first_name}}
+    <li *ngFor="let usr of tmpUsrData.data" class="flex-item">
+      <img [src]="usr.avatar" width="50px">
+      {{usr.first_name}} {{usr.last_name}}
     </li>
   </ul>
 </div>
