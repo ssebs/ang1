@@ -9,12 +9,14 @@ import { Router } from '@angular/router';
 })
 export class PortfolioComponent implements OnInit {
 
-  tmpUsrData: Object;
+  tmpUsrData: any;
+  currentURL: any;
 
   constructor(private portfolioData: PortfolioDataService, private rtr: Router) { }
 
   ngOnInit() {
     this.grabData();
+    this.currentURL = this.rtr.url;
   }
 
   grabData() {

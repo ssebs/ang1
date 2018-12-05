@@ -1,11 +1,10 @@
-<h1 class="center" *ngIf="rtr.url === '/portfolio'" >Portfolio</h1>
-
+<h1 class="center" *ngIf="currentURL === '/portfolio'" >Portfolio</h1>
 <!-- Set wide class if on home page -->
-<div [ngClass]="{'wide' : (rtr.url === '/') }" >
+<div [ngClass]="{'wide' : (currentURL === '/') }" >
   <!-- Change bg color if on home page -->
-  <div [ngClass]="{'secondary-bg' : (rtr.url === '/') }" >
+  <div [ngClass]="{'secondary-bg' : (currentURL === '/') }" >
     <!-- Add padding if on home page -->
-    <div *ngIf="rtr.url === '/'"><br></div>
+    <div *ngIf="currentURL === '/'"><br></div>
 
     <ul *ngIf="tmpUsrData">
       <li *ngFor="let usr of tmpUsrData" >
@@ -16,7 +15,7 @@
     <p *ngIf="!tmpUsrData" class="error">*tmpUsrData not loaded!</p>
 
     <!-- Add padding if on home page -->
-    <div *ngIf="rtr.url === '/'"><br></div>
+    <div *ngIf="currentURL === '/'"><br></div>
 
   </div>
 </div>
