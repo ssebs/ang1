@@ -1,30 +1,33 @@
 $primarytxtcolor: #222222;
 $secondarytxtcolor: #eeeeee;
 $primarycolor: #41afff;
-$secondarycolor: #006fbe;
+$secondarycolor: #188bdd;
 $primarybgcolor: #efefef;
+$secondarybgcolor: #dadada;
+
+.secondary-bg {
+  background-color: $secondarybgcolor;
+}
 
 img {
   vertical-align: middle;
+  text-align: left;
 }
 ul {
   margin: 0px;
-  text-align: center;
-}
-li {
-  color: $secondarytxtcolor;
-  display: inline-block;
-  margin: 10px;
-  padding: 10px;
-  background-color: $secondarycolor;
-}
-
-.flex-container {
+  // text-align: center;
+  list-style: none;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
+  // align-items: center;
 }
-.flex-item {
-  width: auto;
+li {
+  color: $secondarytxtcolor;
+  // display: inline-block;
+  display: block;
+  margin: 10px;
+  padding: 10px;
+  background-color: $secondarycolor;
+  flex: 0 0 200px;
 }

@@ -1,5 +1,6 @@
 import { PortfolioDataService } from './../portfolio-data.service';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-portfolio',
@@ -10,7 +11,7 @@ export class PortfolioComponent implements OnInit {
 
   tmpUsrData: Object;
 
-  constructor(private portfolioData: PortfolioDataService) { }
+  constructor(private portfolioData: PortfolioDataService, private rtr: Router) { }
 
   ngOnInit() {
     this.grabData();

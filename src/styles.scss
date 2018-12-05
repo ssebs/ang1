@@ -1,8 +1,14 @@
 $primarytxtcolor: #222222;
 $secondarytxtcolor: #eeeeee;
 $primarycolor: #41afff;
-
+$secondarycolor: #188bdd;
 $primarybgcolor: #efefef;
+$secondarybgcolor: #dadada;
+
+.wide {
+  margin-left: calc(50% - 50vw);
+  width: 100vw;
+}
 
 .center {
   text-align: center;
@@ -12,10 +18,17 @@ $primarybgcolor: #efefef;
   margin: auto;
   text-align: center;
 }
+.error {
+  color: #ff0000;
+  font-weight: bold;
+}
 
 body {
   margin: 0px;
   background-color: $primarybgcolor;
+}
+ul {
+  padding: 0px;
 }
 
 * {

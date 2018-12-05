@@ -1,10 +1,23 @@
-<h1 class="center">Portfolio</h1>
+<h1 class="center" *ngIf="rtr.url === '/portfolio'" >Portfolio</h1>
 
-<div class="flex-container">
-  <ul *ngIf="tmpUsrData">
-    <li *ngFor="let usr of tmpUsrData.data" class="flex-item">
-      <img [src]="usr.avatar" width="50px">
-      {{usr.first_name}} {{usr.last_name}}
-    </li>
-  </ul>
+<!-- Set wide class if on home page -->
+<div [ngClass]="{'wide' : (rtr.url === '/') }" >
+  <!-- Change bg color if on home page -->
+  <div [ngClass]="{'secondary-bg' : (rtr.url === '/') }" >
+    <!-- Add padding if on home page -->
+    <div *ngIf="rtr.url === '/'"><br></div>
+
+    <ul *ngIf="tmpUsrData">
+      <li *ngFor="let usr of tmpUsrData" >
+        <img [src]="usr.avatar" width="50px">
+        {{usr.first_name}} {{usr.last_name}}
+      </li>
+    </ul>
+    <p *ngIf="!tmpUsrData" class="error">*tmpUsrData not loaded!</p>
+
+    <!-- Add padding if on home page -->
+    <div *ngIf="rtr.url === '/'"><br></div>
+
+  </div>
 </div>
+
